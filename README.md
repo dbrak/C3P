@@ -13,6 +13,7 @@ To run the analysis, execute the following steps:
 3. The top-level folder in the zip file is called "UCI HAR Dataset'.  Naviate to this folder in the console and set it as your working directory in R using setwd() function.
 4. Download the 'run_analysis.R' file from this repo and source the script into R using the source() function.  If you are using Rstudio, at this point you will see a run_analysis() function added to your workspace.
 5. From the "UCI HAR Dataset" folder in the console, run the function by typing:  run_analysis()
+  - NOTE:  The run_analysis function uses the data.table library.  The library is loaded by the script so you will see some text in the console indicating this.  This is normal.  If this package is not installed on your computer, you will need to install the package before you can run the script.
 
 These steps will return a new data.table.
 
