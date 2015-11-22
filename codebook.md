@@ -5,7 +5,7 @@ The Variables
 -------------------
 The orginal study gathered accelerameter information on 30 test subjects (identified by number ranging from 1 to 30) while they engaged in 6 different activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING).
 
-Multiple samples of each participant doing each activity was taken.  The samples were separated into training and test data sets to allow the UCI to develop machine learning algorithms.  The data in both of these data sets is identical.
+Multiple samples of each participant doing each activity was taken.  The samples were separated into training and test data sets to allow UCI to develop machine learning algorithms.  The data in both of these data sets is identical.
 
 For each observation, the following accelerameter and gyrascope measurements were taken:
 
@@ -29,18 +29,19 @@ For each observation, the following accelerameter and gyrascope measurements wer
 
 Note:  variables ending in -XYZ are actually 3 sets of measurements on each the X, Y and Z axis.
 
-For each variable above, the more than 15 additional measurements were computed.  For our analysis, we extacted only the mean and standard deviation data for each measurement and returned the mean of dataset grouping by subject and activity label.
+For each variable above, the more than 15 values were computed.  For our analysis, we extacted only the mean and standard deviation data for each measurement and returned the mean of dataset grouping by subject and activity label.
 
 Additional information on the original study and how the data was processed can be found below.
 
 The Units of Measurement
 ------------------------
-The UCI feature data is all normalized and bounded between -1 and 1.  The raw data is the study comes in three different types of units:
+The raw data in the study comes in three different types of units:
 
 - Total Acceleration data - The acceleration signal from the smart phone accelerameter measured in standard units of 'g'.
 - The Body Acceleration data - Obtained by subtracting gravity from the Total Acceleration data.
 - The Body Gyro data - The angular velocity measured by the gyroscope in radian per second.  
 
+The UCI feature data is all normalized and bounded between -1 and 1.  For each variable, the units of measurement will be unchanged in the returned data table.
 
 The Transformation
 ------------------
@@ -56,6 +57,12 @@ The script undergoes the following steps to convert the raw data into the proces
 6. At this point, the X_test and X_train data tables are combined using rbind.
 7. The columns are reordered to increase the readability of the table by putting subject, activity label information in the first columns.
 8. A mean by subject and activity label is taken.  Note the activity key column is intentionally lost in this operation again to make the resulting table as concise and readable as possible.  No information is lost in this operation as the activity_key data is a duplicate of the more expressive activity_name data.
+
+Output Data
+-----------
+The run_analysis() function returns a data table containing columns for the mean and standard deviations from the original data sets.  All other variable were removed.
+
+The more than 10,000 observations in the original data set are summarize by taking the mean of each subject and each activity.
 
 Additional Reading
 ------------------
