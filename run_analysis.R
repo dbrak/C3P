@@ -1,5 +1,7 @@
 run_analysis <- function(){
 
+    library(data.table)
+
     #Put activity labels and feature names into vectors
     ykey <- data.table(read.table("activity_labels.txt"))
     names(ykey) <- c("activity_key","activity_name")
@@ -39,5 +41,6 @@ run_analysis <- function(){
     master<-rbind(xtest,xtrain)
     setcolorder(master,c(81,1,82,2:80))
 
+    #Returns a tables of means by subject and activity name
     master[,lapply(.SD,mean),by = "subject,activity_name",.SDcols=4:82][order(subject)]
 }
