@@ -38,7 +38,7 @@ The Units of Measurement
 The raw data in the study comes in three different types of units:
 
 - Total Acceleration data - The acceleration signal from the smart phone accelerameter measured in standard units of 'g'.
-- The Body Acceleration data - Obtained by subtracting gravity from the Total Acceleration data.
+- The Body Acceleration data - Obtained by subtracting gravity from the Total Acceleration data.  Standard unit remains 'g'.
 - The Body Gyro data - The angular velocity measured by the gyroscope in radian per second.  
 
 The UCI feature data is all normalized and bounded between -1 and 1.  For each variable, the units of measurement will be unchanged in the returned data table.
