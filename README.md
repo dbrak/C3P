@@ -9,8 +9,8 @@ The data was originally captured by University of California Irving's Center for
 To run the analysis, execute the following steps:
 
 1. Download the data using [this link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
-2. Unzip and put the data into a folder on your computer.  The Getting Data section provides a short description of the expected format.
-3. The top-level folder in the zip file is called "UCI HAR Dataset'.  Naviate to this folder in the console and set it as your working directory in R using setwd() function in R.
+2. Unzip and put the data into a folder on your computer.
+3. The top-level folder in the zip file is called "UCI HAR Dataset'.  Naviate to this folder in the console and set it as your working directory in R using setwd() function.
 4. Download the 'run_analysis.R' file from this repo and source the script into R using the source() function.  If you are using Rstudio, at this point you will see a run_analysis() function added to your workspace.
 5. From the "UCI HAR Dataset" folder in the console, run the function by typing:  run_analysis()
 
