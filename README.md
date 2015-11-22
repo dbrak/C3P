@@ -15,14 +15,14 @@ To run the analysis, execute the following steps:
 2. Unzip and put the data into a folder on your computer.  The Getting Data section provides a short description of the expected format.
 3. The top-level folder in the zip file is called "UCI HAR Dataset'.  Naviate to this folder in the console and set it as your working directory in R using setwd() function in R.
 4. Download the 'run_analysis.R' file from this repo and source the script into R using the source() function.  If you are using Rstudio, at this point you will see a run_analysis() function added to your workspace.
-5. From the "UCI HAR Dataset" folder in the console, run the function by typing:
+5. From the "UCI HAR Dataset" folder in the console, run the function by typing:  run_analysis()
 
->run_analysis()
+These steps will return a new data.table.
 
+##The Data
+The UCI HAR Dataset can be renamed if you desire and the run_analysis function will still work as long as you have set your working directory correctly.  
 
-
-##Getting the Data
-
+Inside the UCI HAR folder, the names and locations of files are required for the script to run properly.  Please do not change the location of any of the subfolders or rename any of the files inside the UCI HAR Dataset.
 
 If you encounter difficulties downloading the data set from the link above, the original data set can be retreived from [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
